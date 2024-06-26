@@ -39,14 +39,14 @@ class SaxonTest {
     @Test
     public void attack_should_return_strength_property_of_the_Saxon() {
         Saxon saxon = new Saxon(health, strength);
-        var resultAttack = saxon.attack(damage);
+        var resultAttack = saxon.attack();
         assertEquals(saxon.strength, resultAttack);
     }
     @Test
     public void attack_should_receive_0_arguments() {
         Saxon saxon = new Saxon(health, strength);
         int damage = 50;
-        int resultAttack = saxon.attack(damage);
+        int resultAttack = saxon.attack();
         assertEquals(this.strength, resultAttack);
     }
 

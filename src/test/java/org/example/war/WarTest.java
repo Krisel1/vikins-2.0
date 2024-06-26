@@ -11,9 +11,10 @@ class WarTest {
     String name = "Harald";
     int strength = 150;
     int health = 300;
+    String msg;
 
     Saxon saxon = new  Saxon(health, strength);
-    Vikings viking = new Vikings(name, health, strength);
+    Vikings viking = new Vikings(name,health, strength, msg);
 
     War war = new War();
 
@@ -105,7 +106,7 @@ class WarTest {
         war.addViking(viking);
         viking.setHealth(150);
         String response = war.saxonAttack();
-        assertEquals(viking.getName() + "has died in act of combat", response);
+        assertEquals(viking.getName() + " has died in act of combat", response);
     }
 
     @Test
@@ -113,6 +114,5 @@ class WarTest {
         war.addSaxon(saxon);
         war.addViking(viking);
         String response = war.saxonAttack();
-        assertEquals(viking.getName() + "has received" + saxon.getStrength() + "points of damage", response);
+        assertEquals(viking.getName() + " has received " + saxon.getStrength() + " points of damage", response);    }
     }
-}

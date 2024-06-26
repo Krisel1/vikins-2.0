@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SoldierTest {
     int strength = 150;
     int health = 300;
-    private int damage;
+
 
     @Test
     public void should_receive_2_arguments() {
@@ -31,21 +31,21 @@ class SoldierTest {
     public void attack_should_receive_0_arguments() {
         Soldier soldier = new Soldier(health, strength);
         int damage = 50;
-        int resultAttack = soldier.attack(damage);
+        int resultAttack = soldier.attack();
         assertEquals(this.strength, resultAttack);
     }
 
     @Test
     public void attack_should_return_a_integer() {
         Soldier soldier = new Soldier(health, strength);
-        int resultAttack = soldier.attack(damage);
+        int resultAttack = soldier.attack();
         assertEquals("Integer", ((Object) resultAttack).getClass().getSimpleName());
     }
 
     @Test
     public void attack_should_return_the_strength_property_of_the_Soldier() {
         Soldier soldier = new Soldier(health, strength);
-        var resultAttack = soldier.attack(damage);
+        var resultAttack = soldier.attack();
         assertEquals(150, resultAttack);
     }
 

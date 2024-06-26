@@ -14,11 +14,19 @@ public class Soldier {
         return health;
     }
 
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
     public int getStrength() {
         return strength;
     }
 
-    public int attack(int damage) {
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public int attack() {
         return this.strength;
     }
 
@@ -26,11 +34,4 @@ public class Soldier {
         health -= damage;
     }
 
-    public int setHealth(int i) {
-        return this.health;
-    }
-
-    public String getName() {
-        return getName;
-    }
 }

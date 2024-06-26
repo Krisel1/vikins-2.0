@@ -14,10 +14,12 @@ public class Vikings extends Soldier {
     }
 
     public String getMsg() {
+
         return msg;
     }
 
     public void setMsg(String msg) {
+
         this.msg = msg;
     }
 
@@ -26,11 +28,16 @@ public class Vikings extends Soldier {
         if (this.health > 0) {
             this.msg = this.name + "has received" + damage + "points of damage";
         } else {
-            this.msg = this.name + "has died in act of combat";
+            this.msg = this.name + "has died in combat";
         }
     }
 
     public String battleCry() {
+
         return "Odin Owns You All!";
+    }
+
+    public String getName() {
+        return name;
     }
 }
